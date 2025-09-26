@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+/* General rule for images and videos */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+/* Sidebar video in section2 */
+.sidebar video {
+  width: 100%;
+  height: 100%;
+  max-height: 400px; /* keep it balanced */
+}
+
+/* Section 3 videos */
+.child video {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+}
+
+/* Section 4 */
+#section4 img, #section4 video {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+
+/* Navbar */
+#navbar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0 40px;
+  box-shadow: 0 0 5px black;
+}
+
+.logo img {
+  max-height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.nav-links img {
+  cursor: pointer;
+}
+
+/* Section 2 */
+#section2 {
+  min-height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.content,.sidebar {
+  flex: 1 1 400px;
+  max-width: 500px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  margin: 10px;
+  padding: 20px;
+  transition: transform 0.5s ease;
+}
+
+.content:hover, .sidebar:hover {
+  transform: scale(1.05);
+}
+
+.content h1 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.content p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.content button {
+  padding: 10px 20px;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.content button:hover {
+  background: blue;
+}
+
+/* Section 3 */
+#section3 {
+  min-height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.child {
+  flex: 1 1 350px;
+  max-width: 400px;
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.5s ease;
+}
+
+.child:hover {
+  transform: scale(1.05);
+}
+
+.child h1 {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.child p {
+  font-size: 16px;
+}
+
+/* Section 4 */
+#section4 {
+  min-height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.content1, .content2, .content3 {
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.5s ease;
+}
+
+.content1:hover, .content2:hover, .content3:hover {
+  transform: scale(1.05);
+}
+
+#section4 img, #section4 video {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Footer */
+#footer {
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#footer a:hover {
+  color: lightblue;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  #section2, #section3, #section4 {
+    flex-direction: column;
+  }
+}
